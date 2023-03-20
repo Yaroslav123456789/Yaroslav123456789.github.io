@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>complete responsive nike shoe website design tutorial</title>
+
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+   <style>
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap");
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #ed2d34;
+}
+
+body {
+<!--  background: url(../images/bg.jpg) no-repeat;-->
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+body.active {
+  padding-left: 30rem;
+}
+
+section {
+  padding: 5rem 9%;
+}
+
+.heading {
+  text-align: center;
+  font-size: 4rem;
+  color: #444;
+  text-transform: capitalize;
+  margin-bottom: 3rem;
+}
+
+.heading span {
+  color: #ed2d34;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  border-radius: 5rem;
+  padding: 1.2rem 3rem;
+  border: 0.2rem solid #444;
+  cursor: pointer;
+  background: none;
+  color: #444;
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+.btn:hover {
+  border-color: #ed2d34;
+  color: #fff;
+  background: #ed2d34;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: -31rem;
+  height: 100%;
+  width: 30rem;
+  background: #ed2d34;
+  padding: 2rem;
+  z-index: 1000;
+}
+
+.header.active {
+  left: 0;
+}
+
+.header .logo {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: bolder;
+}
+
+.header .navbar {
+  padding: 30% 0;
+}
+
+.header .navbar a {
+  display: block;
+  margin: 2rem 0;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.header .navbar a:hover {
+  text-decoration: underline;
+  text-underline-offset: .7rem;
+}
+
+.header .share {
+  text-align: center;
+}
+
+.header .share a {
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  color: #444;
+  background: #fff;
+  margin: 0 .3rem;
+}
+
+.header .share a:hover {
+  background: #444;
+  color: #fff;
+}
+
+.header .credit {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  margin-top: 3rem;
+  line-height: 1.5;
+}
+
+#menu-btn {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  background: #ed2d34;
+  color: #fff;
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2.5rem;
+  cursor: pointer;
+  z-index: 1100;
+  text-align: center;
+}
+
+#menu-btn.fa-times {
+  top: 1rem;
+  left: 24rem;
+}
+
+.banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 3rem;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+}
+
+.banner .content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 41rem;
+          flex: 1 1 41rem;
+}
+
+.banner .content span {
+  font-size: 2.5rem;
+  color: #ed2d34;
+}
+
+.banner .content h3 {
+  font-size: 4rem;
+  color: #444;
+  text-transform: capitalize;
+  padding-top: 1rem;
+}
+
+.banner .content p {
+  padding: 1rem 0;
+  font-size: 1.7rem;
+  color: #666;
+  line-height: 2;
+  padding: 1rem 0;
+
+}
+
+.banner .image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 41rem;
+          flex: 1 1 41rem;
+}
+
+.banner .image img {
+  width: 100%;
+}
+
+.products .slide {
+  text-align: center;
+}
+
+.products .slide img {
+  height: 25rem;
+  margin: 5rem 0;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+
+.products .slide h3 {
+  padding: 1rem 0;
+  font-size: 2.5rem;
+  color: #444;
+  text-transform: capitalize;
+  opacity: 0;
+}
+
+.products .slide .btn {
+  opacity: 0;
+}
+
+.products .swiper-slide-active img {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.products .swiper-slide-active h3, .products .swiper-slide-active .btn {
+  opacity: 1;
+}
+
+.products-preview-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1200;
+  min-height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+.products-preview-container .product-preview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 3rem;
+  background: #fff;
+  padding: 15%;
+  position: relative;
+  display: none;
+}
+
+.products-preview-container .product-preview .fa-times {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 4rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.products-preview-container .product-preview .fa-times:hover {
+  color: #ed2d34;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.products-preview-container .product-preview .image {
+   padding: 20px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+}
+
+.products-preview-container .product-preview .image img {
+  width: 60%;
+}
+
+
+
+
+
+.products-preview-container .product-preview .content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+}
+
+.products-preview-container .product-preview .content h3 {
+  font-size: 3rem;
+  color: #444;
+  text-transform: capitalize;
+}
+
+.products-preview-container .product-preview .content p {
+  font-size: 1.5rem;
+  color: #666;
+  line-height: 2;
+  padding: 1rem 0;
+}
+
+.products-preview-container .product-preview .content .stars {
+  padding: 1rem 0;
+  font-size: 1.7rem;
+}
+
+.products-preview-container .product-preview .content .stars i {
+  color: #ed2d34;
+}
+
+.products-preview-container .product-preview .content .stars span {
+  color: #666;
+}
+
+.products-preview-container .product-preview .content .price {
+  font-size: 3rem;
+  color: #444;
+  text-transform: capitalize;
+  padding: 1rem 0;
+}
+
+.service {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+}
+
+.service .box {
+  text-align: center;
+  padding: 2rem;
+}
+
+.service .box i {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: #ed2d34;
+}
+
+.service .box p {
+  font-size: 2rem;
+  color: #666;
+  line-height: 2;
+  padding: 1rem 0;
+}
+
+.reviews .slide {
+  text-align: center;
+  padding: 2rem;
+}
+
+.reviews .slide i {
+  font-size: 4rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.reviews .slide p {
+  font-size: 1.5rem;
+  color: #666;
+  line-height: 2;
+  padding: 1rem 0;
+}
+
+.reviews .slide img {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  margin: 1rem 0;
+}
+
+.reviews .slide h3 {
+  font-size: 1.7rem;
+  color: #444;
+  text-transform: capitalize;
+}
+
+.contact {
+  padding-bottom: 12rem;
+}
+
+.contact .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.contact .row form {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 41rem;
+          flex: 1 1 41rem;
+}
+
+.contact .row form .box {
+  padding: 2rem 0;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  border-bottom: 0.2rem solid #444;
+  width: 100%;
+}
+
+.contact .row form .box:focus {
+  border-color: #ed2d34;
+}
+
+.contact .row form textarea {
+  height: 15rem;
+  resize: none;
+}
+
+.contact .row .contact-info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 41rem;
+          flex: 1 1 41rem;
+}
+
+.contact .row .contact-info h3 {
+  padding-bottom: 1rem;
+  font-size: 3rem;
+  color: #444;
+  text-transform: capitalize;
+}
+
+.contact .row .contact-info .grapgh {
+  font-size: 1.4rem;
+  color: #666;
+  line-height: 2;
+  padding: 1rem 0;
+}
+
+.contact .row .contact-info .icons {
+  padding: 1.5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5rem;
+}
+
+.contact .row .contact-info .icons i {
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  background: #ed2d34;
+  color: #fff;
+  text-align: center;
+}
+
+.contact .row .contact-info .icons p {
+  font-size: 1.5rem;
+  color: #666;
+  line-height: 2;
+  padding: 1rem 0;
+  padding: 0;
+}
+
+.contact .row .contact-info .share {
+  padding-top: 2rem;
+}
+
+.contact .row .contact-info .share a {
+  font-size: 3rem;
+  margin-right: 2rem;
+  color: #666;
+}
+
+.contact .row .contact-info .share a:hover {
+  color: #ed2d34;
+}
+
+@media (max-width: 1200px) {
+  body.active {
+    padding-left: 0;
+  }
+  header.active {
+    -webkit-box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
+            box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
+  }
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  section {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .banner .content h3 {
+    font-size: 3rem;
+  }
+  .products .slide img {
+    height: 15rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
+   </style>
+
+</head>
+<body>
+
+<!-- header section starts-->
+
+<div id="menu-btn" class="fas fa-bars"></div>
+
+<header class="header">
+
+   <a href="#" class="logo">NIKE</a>
+
+   <nav class="navbar">
+      <a href="#banner">banner</a>
+      <a href="#products">products</a>
+      <a href="#reviews">reviews</a>
+      <a href="#contact">contact</a>
+   </nav>
+
+   <div class="share">
+      <a href="#" class="fab fa-facebook-f"></a>
+      <a href="#" class="fab fa-twitter"></a>
+      <a href="#" class="fab fa-instagram"></a>
+      <a href="#" class="fab fa-linkedin"></a>
+   </div>
+
+   <p class="credit"> &copy; copyright @ 2022 by mr. web designer </p>
+
+</header>
+
+<!-- header section ends-->
+
+<!-- banner section starts  -->
+
+<section class="banner" id="banner">
+
+   <div class="content">
+      <span>upto 50% off</span>
+      <h3>nike airmax shoes</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde enim quas doloribus sed vero eum corporis iste atque rem similique.</p>
+      <a href="#" class="btn">shop now</a>
+   </div>
+
+   <div class="image">
+      <img src="images/banner-product.png" alt="">
+   </div>
+
+</section>
+
+<!-- banner section ends -->
+
+<!-- prodcuts section starts  -->
+
+<section class="products" id="products">
+
+   <h1 class="heading"> our <span>products</span> </h1>
+
+   <div class="swiper products-slider">
+
+      <div class="swiper-wrapper">
+
+         <div class="swiper-slide slide">
+            <img src="images/product-img1.jpg" alt="" style="padding: 30px 0;">
+            <h3>nike airmax</h3>
+            <div class="btn" data-product="product-1">see details</div>
+         </div>
+
+         <div class="swiper-slide slide">
+            <img src="images/product-img2.jpg" alt="" style="padding: 30px 0;">
+            <h3>nike airmax</h3>
+            <div class="btn" data-product="product-2">see details</div>
+         </div>
+
+         <div class="swiper-slide slide">
+            <img src="images/product-img3.jpg" alt="" style="padding: 30px 0;">
+            <h3>nike airmax</h3>
+            <div class="btn" data-product="product-3">see details</div>
+         </div>
+
+         <div class="swiper-slide slide">
+            <img src="images/product-img4.jpg" alt="" style="padding: 30px 0;">
+            <h3>nike airmax</h3>
+            <div class="btn" data-product="product-4">see details</div>
+         </div>
+
+         <div class="swiper-slide slide">
+            <img src="images/product-img5.jpg" alt="" style="padding: 30px 0;">
+            <h3>nike airmax</h3>
+            <div class="btn" data-product="product-5">see details</div>
+         </div>
+
+         <div class="swiper-slide slide">
+            <img src="images/product-img6.jpg" alt="" style="padding: 30px 0;">
+            <h3>nike airmax</h3>
+            <div class="btn" data-product="product-6">see details</div>
+         </div>
+
+      </div>
+
+   </div>
+
+</section>
+
+<!-- prodcuts section ends -->
+
+<!-- product preview section starts  -->
+
+<section class="products-preview-container">
+
+   <div class="product-preview" data-target="product-1">
+      <div class="fas fa-times"></div>
+      <div class="image">
+         <img src="images/product-img1.jpg" alt="">
+      </div>
+      <div class="content">
+         <h3>nike airmax</h3>
+         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas eligendi, corporis sed culpa assumenda odio ullam itaque porro facere quaerat!</p>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>( 250 )</span>
+         </div>
+         <div class="price">$49.99</div>
+         <a href="#" class="btn">buy now</a>
+      </div>
+   </div>
+
+   <div class="product-preview" data-target="product-2">
+      <div class="fas fa-times"></div>
+      <div class="image">
+         <img src="images/product-img2.jpg" alt="">
+      </div>
+      <div class="content">
+         <h3>nike airmax</h3>
+         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas eligendi, corporis sed culpa assumenda odio ullam itaque porro facere quaerat!</p>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>( 250 )</span>
+         </div>
+         <div class="price">$49.99</div>
+         <a href="#" class="btn">buy now</a>
+      </div>
+   </div>
+
+   <div class="product-preview" data-target="product-3">
+      <div class="fas fa-times"></div>
+      <div class="image">
+         <img src="images/product-img3.jpg" alt="">
+      </div>
+      <div class="content">
+         <h3>nike airmax</h3>
+         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas eligendi, corporis sed culpa assumenda odio ullam itaque porro facere quaerat!</p>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>( 250 )</span>
+         </div>
+         <div class="price">$49.99</div>
+         <a href="#" class="btn">buy now</a>
+      </div>
+   </div>
+
+   <div class="product-preview" data-target="product-4">
+      <div class="fas fa-times"></div>
+      <div class="image">
+         <img src="images/product-img4.jpg" alt="">
+      </div>
+      <div class="content">
+         <h3>nike airmax</h3>
+         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas eligendi, corporis sed culpa assumenda odio ullam itaque porro facere quaerat!</p>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>( 250 )</span>
+         </div>
+         <div class="price">$49.99</div>
+         <a href="#" class="btn">buy now</a>
+      </div>
+   </div>
+
+   <div class="product-preview" data-target="product-5">
+      <div class="fas fa-times"></div>
+      <div class="image">
+         <img src="images/product-img5.jpg" alt="">
+      </div>
+      <div class="content">
+         <h3>nike airmax</h3>
+         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas eligendi, corporis sed culpa assumenda odio ullam itaque porro facere quaerat!</p>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>( 250 )</span>
+         </div>
+         <div class="price">$49.99</div>
+         <a href="#" class="btn">buy now</a>
+      </div>
+   </div>
+
+   <div class="product-preview" data-target="product-6">
+      <div class="fas fa-times"></div>
+      <div class="image">
+         <img src="images/product-img6.jpg" alt="">
+      </div>
+      <div class="content">
+         <h3>nike airmax</h3>
+         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas eligendi, corporis sed culpa assumenda odio ullam itaque porro facere quaerat!</p>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>( 250 )</span>
+         </div>
+         <div class="price">$49.99</div>
+         <a href="#" class="btn">buy now</a>
+      </div>
+   </div>
+
+</section>
+
+<!-- product preview section ends -->
+
+<!-- services section starts  -->
+
+<section class="service">
+
+   <div class="box">
+      <i class="fas fa-shipping-fast"></i>
+      <p>free delivery</p>
+   </div>
+
+   <div class="box">
+      <i class="fas fa-redo"></i>
+      <p>10 days return</p>
+   </div>
+
+   <div class="box">
+      <i class="fas fa-headset"></i>
+      <p>24/7 support</p>
+   </div>
+
+</section>
+
+<!-- services section ends -->
+
+<!-- reviews section starts  -->
+
+<section class="reviews" id="reviews">
+
+   <h1 class="heading"> clients <span>reviews</span> </h1>
+
+   <div class="swiper reviews-slider">
+
+      <div class="swiper-wrapper">
+
+         <div class="swiper-slide slide">
+            <i class="fas fa-quote-right"></i>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt laudantium est quam eveniet perferendis cum reprehenderit aperiam nesciunt soluta optio?</p>
+            <img src="images/pic-1.png" alt="">
+            <h3>john deo</h3>
+         </div>
+
+         <div class="swiper-slide slide">
+            <i class="fas fa-quote-right"></i>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt laudantium est quam eveniet perferendis cum reprehenderit aperiam nesciunt soluta optio?</p>
+            <img src="images/pic-2.png" alt="">
+            <h3>john deo</h3>
+         </div>
+
+         <div class="swiper-slide slide">
+            <i class="fas fa-quote-right"></i>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt laudantium est quam eveniet perferendis cum reprehenderit aperiam nesciunt soluta optio?</p>
+            <img src="images/pic-3.png" alt="">
+            <h3>john deo</h3>
+         </div>
+
+         <div class="swiper-slide slide">
+            <i class="fas fa-quote-right"></i>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt laudantium est quam eveniet perferendis cum reprehenderit aperiam nesciunt soluta optio?</p>
+            <img src="images/pic-4.png" alt="">
+            <h3>john deo</h3>
+         </div>
+
+         <div class="swiper-slide slide">
+            <i class="fas fa-quote-right"></i>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt laudantium est quam eveniet perferendis cum reprehenderit aperiam nesciunt soluta optio?</p>
+            <img src="images/pic-5.png" alt="">
+            <h3>john deo</h3>
+         </div>
+
+         <div class="swiper-slide slide">
+            <i class="fas fa-quote-right"></i>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt laudantium est quam eveniet perferendis cum reprehenderit aperiam nesciunt soluta optio?</p>
+            <img src="images/pic-6.png" alt="">
+            <h3>john deo</h3>
+         </div>
+
+      </div>
+
+   </div>
+
+</section>
+
+<!-- reviews section ends -->
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+
+   <h1 class="heading"> <span>contact</span> us </h1>
+
+   <div class="row">
+
+      <form action="">
+         <input type="text" placeholder="name" class="box">
+         <input type="email" placeholder="email" class="box">
+         <input type="number" placeholder="phone" class="box">
+         <textarea name="" class="box" placeholder="message" id="" cols="30" rows="10"></textarea>
+         <input type="submit" value="send message" class="btn">
+      </form>
+
+      <div class="contact-info">
+         <h3>do you have any questions?</h3>
+         <p class="grapgh">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores nobis aperiam in numquam blanditiis delectus, repudiandae aliquam voluptate vel fuga.</p>
+         <div class="icons">
+            <i class="fas fa-map"></i>
+            <div class="info">
+               <p>mumbai, india - 400104</p>
+            </div>
+         </div>
+         <div class="icons">
+            <i class="fas fa-envelope"></i>
+            <div class="info">
+               <p>shaikhanas@gmail.com</p>
+               <p>anasbhai@gmail.com</p>
+            </div>
+         </div>
+         <div class="icons">
+            <i class="fas fa-phone"></i>
+            <div class="info">
+               <p>+123-456-7890</p>
+               <p>+111-222-3333</p>
+            </div>
+         </div>
+         <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+         </div>
+      </div>
+
+   </div>
+
+</section>
+
+<!-- contact section ends -->
+
+
+
+
+
+
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+
+<script>
+let menu = document.querySelector('#menu-btn');
+let header = document.querySelector('.header');
+
+menu.onclick = () =>{
+  menu.classList.toggle('fa-times');
+  header.classList.toggle('active');
+  document.body.classList.toggle('active');
+};
+
+window.onscroll = () =>{
+  if(window.innerWidth < 1200){
+    menu.classList.remove('fa-times');
+    header.classList.remove('active');
+    document.body.classList.remove('active');
+  };
+};
+
+let productPreviewContainer = document.querySelector('.products-preview-container');
+let prodcutPreview = productPreviewContainer.querySelectorAll('.product-preview');
+
+document.querySelectorAll('.products .slide .btn').forEach(detailBtn =>{
+  detailBtn.onclick = () =>{
+    productPreviewContainer.style.display = 'block';
+    let name = detailBtn.getAttribute('data-product');
+    prodcutPreview.forEach(preview =>{
+      let target = preview.getAttribute('data-target');
+      if(name == target){
+       preview.style.display = 'flex';
+      };
+    });
+  };
+});
+
+document.querySelectorAll('.products-preview-container .product-preview .fa-times').forEach(close =>{
+  close.onclick = () =>{
+    productPreviewContainer.style.display = 'none';
+    prodcutPreview.forEach(closePreview =>{
+      closePreview.style.display = 'none';
+    });
+  };
+});
+
+var swiper = new Swiper(".products-slider", {
+  loop:true,
+  spaceBetween: 20,
+  grabCursor:true,
+  centeredSlides: true,
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    991: {
+      slidesPerView: 3,
+    },
+  },
+});
+
+var swiper = new Swiper(".reviews-slider", {
+  loop:true,
+  spaceBetween: 20,
+  grabCursor:true,
+  centeredSlides: true,
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    991: {
+      slidesPerView: 3,
+    },
+  },
+});
+
+</script>
+
+</body>
+</html>
