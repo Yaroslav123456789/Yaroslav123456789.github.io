@@ -9,9 +9,9 @@ let btn = document.getElementById("btn");
 
 btn.addEventListener("click", function()  {
 	    tg.sendData([{
-		"name": document.getElementById("name").value,
-		"emai": document.getElementById("email").value,
-		"tel": document.getElementById("tel").value,
-		"password": document.getElementById("password").value
+		"Id": document.getElementById("Id").value,
+		"Title": document.getElementById("Title").value,
+		"Description": document.getElementById("Description").value,
+		"Price": document.getElementById("Price").value
 	}]);
 });
